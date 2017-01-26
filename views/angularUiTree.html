@@ -1,0 +1,73 @@
+<script type="text/ng-template" id="nodes_renderer2.html">
+  <div class="tree-node">
+    <div class="pull-left tree-handle" ui-tree-handle>
+      <span class="glyphicon glyphicon-list"></span>
+    </div>
+    <div class="tree-node-content">
+      <div class="pull-left node_title">
+        {{node.title}}
+      </div>
+      <div class="pull-right">
+        <a class="btn btn-success btn-xs" data-nodrag ng-click="toggle(this)">
+          <span class="glyphicon" ng-class="{'glyphicon-chevron-right': collapsed,'glyphicon-chevron-down': !collapsed}"></span>
+        </a>
+        <a class="btn btn-danger btn-xs" data-nodrag ng-click="remove(this)">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a>
+        <a class="btn btn-primary btn-xs" data-nodrag ng-click="newSubItem(this)" style="margin-right: 8px;">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </div>
+      <div class="clear"></div>
+      
+      <ul class="input_div" ng-model="node.para" >
+        <li ng-repeat="para in node.para">
+          <span>{{para.title}}</span>
+          <input type="text" ng-model="para.Value">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+    <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer2.html'">
+    </li>
+  </ol>
+</script>
+
+<div class="row">
+  <div class="col-sm-8">
+      <div style="display: inline-block;">
+      <a class="btn btn-primary btn-xs" data-nodrag ng-click="newJSON()" style="margin-right: 8px;">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+      <span>Add New JSON</span>
+    </div>
+    <div style="display: inline-block;margin-left:20px">
+      <a class="btn btn-primary btn-xs" data-nodrag ng-click="newItem()" style="margin-right: 8px;">
+        <span class="glyphicon glyphicon-plus"></span>
+      </a>
+      <span>Add More Parent Nodes</span>
+    </div>
+    <div class="clear"></div>
+    <div style="border-top:1px solid #e2e2e2;padding-top:5px;margin-top:5px">
+      <ul class="jsonVariables">
+        <li ng-repeat="json in jsonArr track by $index" ng-click="loadJsonData(json)" class="jsonItem">
+            <div class="btn btn-default" ng-click="loadJsonData(json)">Json {{$index+1}}</div>
+            <div class="btn btn-default" ng-click="removeJson(json)">x</div>
+        </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div ui-tree id="tree2-root" data-clone-enabled="true" data-drag-enabled="true" data-max-depth="2">
+      <ol ui-tree-nodes="" ng-model="tree2">
+        <li ng-repeat="node in tree2" ui-tree-node ng-include="'nodes_renderer2.html'"></li>
+      </ol>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <h4 class="pull-left">JSON View</h4>
+    <div class="pull-right btn btn-default" ng-click="addJson()">Save</div>
+    <div class="clear"></div>
+    <pre class="code">{{ tree2 | json }}</pre>
+  </div>
+</div>

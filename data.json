@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": "Level 1 ",
+    "para": [
+      {
+        "id": 11,
+        "title": "Level 1_para1",
+        "Value": "Level 1_Value 1 "
+      },
+      {
+        "id": 11,
+        "title": "Level 1_para2",
+        "Value": "Level 1_Value 2 "
+      },
+      {
+        "id": 11,
+        "title": "Level 1_para3",
+        "Value": "Level 1_Value 3 "
+      },
+      {
+        "id": 11,
+        "title": "Level 1_para4",
+        "Value": "Level 1_Value 4"
+      }
+    ],
+    "nodes": [
+      {
+        "id": 11,
+        "title": "Level 1.1 ",
+        "para": [
+          {
+            "id": 11,
+            "title": "Level 1.1_para1",
+            "Value": "Level 1.1_Value 1"
+          },
+          {
+            "id": 11,
+            "title": "Level 1.1_para2",
+            "Value": "Level 1.1_Value 2"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Level 1.2 ",
+        "para": [
+          {
+            "id": 12,
+            "title": "Level 1.2_para1",
+            "Value": "Level 1.2_Value 1"
+          },
+          {
+            "id": 12,
+            "title": "Level 1.2_para2",
+            "Value": "Level 1.2_Value 2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Level 2",
+    "para": [
+      {
+        "id": 22,
+        "title": "Level 2_para1",
+        "Value": "Level 2_Value 1 "
+      },
+      {
+        "id": 22,
+        "title": "Level 2_para2",
+        "Value": "Level 2_Value 2 "
+      },
+      {
+        "id": 22,
+        "title": "Level 2_para3",
+        "Value": "Level 2_Value 3 "
+      },
+      {
+        "id": 22,
+        "title": "Level 2_para4",
+        "Value": "Level 2_para4"
+      }
+    ],
+    "nodrop": true,
+    "nodes": []
+  },
+  {
+    "id": 3,
+    "title": "Level 3",
+     "para": [
+      {
+        "id": 33,
+        "title": "Level 3_para1",
+        "Value": "Level 3_Value 1 "
+      },
+      {
+        "id": 33,
+        "title": "Level 3_para2",
+        "Value": "Level 3_Value 2 "
+      },
+      {
+        "id": 33,
+        "title": "Level 3_para3",
+        "Value": "Level 3_Value 3 "
+      },
+      {
+        "id": 33,
+        "title": "Level 3_para4",
+        "Value": "Level 3_para4"
+      }
+    ],
+    "nodes": []
+  }
+]
